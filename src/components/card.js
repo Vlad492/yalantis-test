@@ -10,13 +10,10 @@ const Card = (props) => {
 
     }
 
-    let color = setColor(props.count)
+    let color = setColor(props.users.length)
+
     
-
-
-
-
-    return (
+return (
         <div className="month" style={{ backgroundColor: color }}>
             <div className="container">
                 <h1>{props.month}</h1>
