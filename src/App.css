@@ -11,7 +11,7 @@ html{
 .App{
   height: 90vh;
   text-align: center;
-  padding: 50px;
+  padding-top: 50px;
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +24,8 @@ html{
 /*--------------------Card--------------------------*/
 .month{
   padding: 20px;
-  width: 50%;
+  width: 70%;
+  min-width: 150px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
