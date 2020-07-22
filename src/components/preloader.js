@@ -7,7 +7,7 @@ const preloader = () => {
                 
             </div>
             <div className="preloaderText">
-                <h3>Cannot load data</h3>
+                <h3>Loading data...</h3>
             </div>
         </div>
     )
