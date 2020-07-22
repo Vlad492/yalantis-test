@@ -3,9 +3,9 @@ import React from 'react'
 const Card = (props) => {
 
     const setColor = (count) => {
-        if (count < 3) return 'grey'
-        else if (count < 7) return 'blue'
-        else if (count < 11) return 'green'
+        if (count <= 2) return 'grey'
+        else if (count <= 6) return 'blue'
+        else if (count <= 10) return 'green'
         else return 'red'
 
     }
