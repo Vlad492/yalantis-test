@@ -14,7 +14,6 @@ const Card = (props) => {
         <div className="month" style={{backgroundColor: color}}>
             <div className="container">
                 <h1>{props.month}</h1>
-                <h2 className="number">{props.count}</h2>
             </div>
             <div className="popUp" style={{backgroundColor: color}}>
                 <div className="popUpContent">
