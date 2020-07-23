@@ -16,9 +16,9 @@ class App extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('https://yalantis-react-school-api.yalantis.com/api/task0/users')
+      fetch('https://yalantis-react-school-api.yalantis.com/api/task0/users')
       .then((res) => res.json())
-      .then((res) => this.setState({ users: res }))
+      .then((res)=>this.setState({ users: res }))
   }
   render() {
     if (this.state.users[0]) {
