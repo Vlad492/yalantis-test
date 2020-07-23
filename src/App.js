@@ -16,20 +16,17 @@ class App extends React.Component {
     }
   }
   componentDidMount() {
-    const request = async () => {
-      let response = await fetch('https://yalantis-react-school-api.yalantis.com/api/task0/users').then((res) => res.json())
-      this.setState({ users: response })
-
-
-    }
-    request()
+    fetch('https://yalantis-react-school-api.yalantis.com/api/task0/users')
+      .then((res) => res.json())
+      .then((res) => this.setState({ users: res }))
   }
   render() {
     if (this.state.users[0]) {
       return (
         <div className="App">
-          <article><h1>Test app</h1>
-          {this.state.months.map((elem, index) => <Card month={elem} key={index} users={this.state.users.filter((user) => new Date(user.dob).getMonth() === index)} />)}
+          <article>
+            <h1>Test app</h1>
+            {this.state.months.map((elem, index) => <Card month={elem} key={index} users={this.state.users.filter((user) => new Date(user.dob).getMonth() === index)} />)}
           </article>
 
         </div>
