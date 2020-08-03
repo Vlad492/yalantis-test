@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = (props) => {
+function Card(props){
 
     const setColor = (count) => {
         if (count <= 2) return 'grey'
