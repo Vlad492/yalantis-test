@@ -8,20 +8,26 @@ import { useState, useEffect } from 'react'
 function App() {
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   const [users, setUsers] = useState()
+  
   const request = async () => {
     try {
       let res = await fetch('https://yalantis-react-school-api.yalantis.com/api/task0/users').then((res) => res.json())
       setUsers(res)
     } catch (e) {
-      console.log(e)
+      console.error(e)
     }
   }
+
   useEffect(() => {
     request()
   }, [])
+
   useEffect(() => {
     console.log(users)
   }, [users])
+
+
+
 
   if (users) {
     return (
